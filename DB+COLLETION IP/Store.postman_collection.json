@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "a3bf1a60-5263-4141-b593-9ce2e28a43cc",
+		"name": "Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/categories",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products/?category_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "category_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=badry&email=badrynabil7@gmail.com&phone=01153328857&password=12345678&password_confirmation=12345678",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "badry"
+						},
+						{
+							"key": "email",
+							"value": "badrynabil7@gmail.com"
+						},
+						{
+							"key": "phone",
+							"value": "01153328857"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?phone=01153328857&password=12345678",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": "01153328857"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "products-favourite",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "api_token",
+							"value": "cwMdaR3GC0GIurgBZ13eOgxCPWUUhT34Vjq6ONIKbA9qbUV9tJ1PyAIYQPSK",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/products-favourite",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products-favourite"
+					],
+					"query": [
+						{
+							"key": "product_id",
+							"value": "16",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "myfavourites-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/myfavourites-products?api_token=cwMdaR3GC0GIurgBZ13eOgxCPWUUhT34Vjq6ONIKbA9qbUV9tJ1PyAIYQPSK",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"myfavourites-products"
+					],
+					"query": [
+						{
+							"key": "api_token",
+							"value": "cwMdaR3GC0GIurgBZ13eOgxCPWUUhT34Vjq6ONIKbA9qbUV9tJ1PyAIYQPSK"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
